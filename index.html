@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./style/main.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-content">
+      <!-- LEFT SIDE -->
+      <div class="nav-left-div">
+        <img src="/images/logo.svg" alt="logo" class="logo">
+        <ul class="nav-buttons-list">
+          <li><a href="#" target="_blank">Collections</a></li>
+          <li><a href="#" target="_blank">Men</a></li>
+          <li><a href="#" target="_blank">Women</a></li>
+          <li><a href="#" target="_blank">About</a></li>
+          <li><a href="#" target="_blank">Contact</a></li>
+        </ul>
+      </div>
+      <!-- RIGHT-SIDE -->
+      <div class="nav-right-div">
+        <div class="cart-div">
+          <img src="/images/icon-cart.svg" class="cart-icon">
+          <div class="order-count">
+            <p class="counter"></p>
+          </div>
+        </div>
+        <img src="/images/image-avatar.png" class="user-img">
+        <!-- HIDDEN CART CHECK WINDOW START -->
+        <div class="cart-check-window">
+          <span class="close">x</span>
+          <div class="empty-case">
+            <h2>Cart</h2>
+            <hr>
+          </div>
+          <h3 id="empty">your cart is empty</h3>
+
+          <div class="cart-product-div">
+            <img class="cart-product-img" src="/images/image-product-1-thumbnail.jpg">
+            <div class="cart-info-div">
+              <p id="cart-product-info">Fall Limited Edition Sneakers</p>
+              <p class="p-cart-product-price">
+                <span id="cart-product-price">$125.99</span>
+                <span id="cart-item-cont">x</span>
+                <span id="cart-final-price">$125.99</span>
+              </p>
+            </div>
+            <img id="del-btn" src="/images/icon-delete.svg" alt="">
+          </div>
+          <div class="checkout-btn">Checkout</div>
+        </div>
+        <!-- HIDDEN CART CHECK WINDOW END -->
+      </div>
+    </div>
+    <hr>
+  </nav>
+
+
+
+  <section>
+
+    <div class="center-main-continner">
+      <!-- CENTER LEFT SIDE START -->
+      <div class="main-product-img-div">
+        <div class="center-left-content-continer">
+          <img src="/images/image-product-1.jpg" class="main-img">
+          <div class="thumbnail-photo-div">
+            <img id="thumbnail-photo1" src="/images/image-product-1-thumbnail.jpg">
+            <img id="thumbnail-photo2" src="/images/image-product-2-thumbnail.jpg">
+            <img id="thumbnail-photo3" src="/images/image-product-3-thumbnail.jpg">
+            <img id="thumbnail-photo4" src="/images/image-product-4-thumbnail.jpg">
+          </div>
+        </div>
+
+      </div>
+      <!-- CENTER LEFT SIDE END -->
+
+
+
+
+
+
+
+
+
+
+
+      <!-- CAENTER RIGHT SIDE START -->
+      <div class="detils-of-product-div">
+        <div class="detils-of-product-div-content-div">
+          <p class="orange_header">SNEAKER COMPANY</p>
+          <h2 class="main-header">Fall Limited Edition Sneakers</h2>
+          <p class="describtion">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+          </p>
+          <p class="price">$125.00 <span class="descount">50%</span></p>
+          <p class="real-price">$250.00</p>
+
+          <div class="footer-div">
+            <div class="left-div">
+              <img src="/images/icon-plus.svg" class="plus">
+              <p class="item-cont">0</p>
+              <img src="/images/icon-minus.svg" class="minus">
+            </div>
+            <button id="add_btn" class="add-to-cart"> Add to cart</button>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- CAENTER RIGHT SIDE END -->
+
+  </section>
+
+  </div>
+
+
+
+
+
+  <!-- PUPUP PRODUCT WINDOW START -->
+  <div class="pupup-product-window" id="show-product-imge">
+    <div class="pupup-product-window-content-continer">
+      <button class="close-btn"><img src="/images/icon-close.svg"></button>
+      <button><img src="/images/icon-previous.svg"></button>
+      <button class="right-btn"><img src="/images/icon-next.svg"></button>
+      <img src="/images/image-product-1.jpg" id="main-img-pupUp-window">
+      <div class="pupup-product-window-thumbnail-photo-div">
+        <img id="thumbnail-photo1" src="/images/image-product-1-thumbnail.jpg">
+        <img id="thumbnail-photo2" src="/images/image-product-2-thumbnail.jpg">
+        <img id="thumbnail-photo3" src="/images/image-product-3-thumbnail.jpg">
+        <img id="thumbnail-photo4" src="/images/image-product-4-thumbnail.jpg">
+      </div>
+
+    </div>
+  </div>
+  <!-- PUPUP PRODUCT WINDOW END -->
+
+
+  <script src="./js/actions.js"></script>
+
+</body>
+
+</html>
