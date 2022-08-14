@@ -85,6 +85,7 @@ hr {
     color: white;
     z-index: 10;
     justify-content: center;
+    user-select: none;
 }
 
 .cart-div {
@@ -124,11 +125,14 @@ hr {
 }
 
 .empty-case {
-    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
+}
+
+.empty-case h2 {
+    margin: 10px 0;
 }
 
 .checkout-btn {

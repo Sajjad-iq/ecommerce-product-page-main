@@ -1,4 +1,3 @@
-/* CENTER RIGHT SIDE START */
 .detils-of-product-div {
     display: flex;
     justify-content: center;
@@ -16,7 +15,6 @@
 .detils-of-product-div-content-div .main-header {
     font-size: 30px;
     color: var(--Very-vark-blue);
-    width: 75%;
     margin: 15px 0;
     font-weight: 700;
 }
@@ -73,13 +71,13 @@
     height: 7px;
 }
 
-.footer-div .add-to-cart {
-    padding: 15px 80px;
+.add-to-cart {
+    padding: 0 90px;
     border: none;
     border-radius: 15px;
     background-color: var(--Orange);
     color: white;
-    font-weight: 700;
+    font-weight: 400;
     display: flex;
     align-items: center;
     transition: 0.3s;
@@ -90,4 +88,7 @@
 
 }
 
-/* CENTER RIGHT SIDE END */
+.plus,
+.minus {
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+.main-product-img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.main-product-img-div .main-img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+
+.thumbnail-photo-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.image {
+    width: 65px;
+    margin-top: 15px;
+    border-radius: 10px;
+}

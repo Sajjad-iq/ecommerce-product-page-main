@@ -1,13 +1,27 @@
 
-var photo_List = ["images/image-product-1.jpg", "images/image-product-2.jpg", "images/image-product-3.jpg", "images/image-product-4.jpg"]
-var photoCount = 0
+var PhotoList = ["images/image-product-1.jpg", "images/image-product-2.jpg", "images/image-product-3.jpg", "images/image-product-4.jpg"]
 var orderCount = 1
 const deleteFromCart = document.getElementById("del-btn")
 const cartBtn = document.querySelector(".cart-icon")
 const AddToCartBtn = document.querySelector(".add-to-cart")
 const pluss = document.querySelector(".plus")
 const closeCart = document.querySelector(".close")
+const minus = document.querySelector(".minus")
+const images = Array.from(document.querySelectorAll('.image'));
+const MainImage = document.querySelector(".main-img")
 
+for (let i = 0; i < images.length; i++) {
+    images[i].src = PhotoList[i]
+}
+
+images.forEach(function (img, index) {
+    img.addEventListener("click", () => ShowTheImg(index))
+})
+
+const ShowTheImg = (index) => {
+    MainImage.src = PhotoList[index]
+    console.log("ok")
+}
 
 
 
@@ -51,6 +65,25 @@ function plus() {
     document.querySelector("#cart-item-cont").innerHTML = "x" + orderCount
 }
 
+minus.addEventListener("click", minuss)
+function minuss() {
+
+    document.querySelector(".counter").innerHTML = orderCount
+    document.querySelector(".item-cont").innerHTML = orderCount
+    let price = 125 * orderCount;
+    document.querySelector("#cart-final-price").innerHTML = `$${price}`
+    document.querySelector("#cart-item-cont").innerHTML = "x" + orderCount
+    orderCount -= 1;
+    if (orderCount == -1) {
+        orderCount = 1
+        document.querySelector('.cart-product-div').style.display = "none"
+        document.querySelector("#empty").style.display = "block"
+        document.querySelector(".order-count").style.display = "none"
+        document.querySelector(".checkout-btn").style.display = "none"
+        document.querySelector(".empty-case").style.display = "block"
+    }
+}
+
 deleteFromCart.addEventListener("click", deleteBtn)
 function deleteBtn() {
     orderCount = 1
@@ -59,124 +92,58 @@ function deleteBtn() {
     document.querySelector(".order-count").style.display = "none"
     document.querySelector(".checkout-btn").style.display = "none"
     document.querySelector(".empty-case").style.display = "block"
+    if (orderCount == 0) {
 
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function remove_item() {
-    item_cont -= 1;
-    const final_price = document.querySelector('#item-count').innerHTML = item_cont;
-
-}
-
-
-function thumbnail_img_btn1() {
-    document.getElementById("main-img-pupUp-window").src = photo_List[0];
-    document.getElementById("main-img").src = photo_List[0];
-
-
-}
-
-function thumbnail_img_btn2() {
-    document.getElementById("main-img-pupUp-window").src = photo_List[1];
-    document.getElementById("main-img").src = photo_List[1];
-
-}
-
-function thumbnail_img_btn3() {
-    document.getElementById("main-img-pupUp-window").src = photo_List[2];
-    document.getElementById("main-img").src = photo_List[2];
-
-}
-
-function thumbnail_img_btn4() {
-    document.getElementById("main-img-pupUp-window").src = photo_List[3];
-    document.getElementById("main-img").src = photo_List[3];
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function next_photo() {
-    document.getElementById("main-img-pupUp-window").src = photo_List[photo_range];
-    photo_range += 1;
-    if (photo_range == 4) {
-        photo_range = 0
-    };
-};
-
-function previous_photo() {
-    document.getElementById("main-img-pupUp-window").src = photo_List[photo_range];
-
-    photo_range -= 1
-    if (photo_range == -1) {
-        photo_range = 3
     }
 }
 
 
 
 
-function show_pupUp() {
-    const pupUp = document.querySelector("#show-product-imge")
-    if (pupUp.style.display == "flex") {
-        pupUp.style.display = "none"
-    } else {
-        pupUp.style.display = "flex"
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
