@@ -2,10 +2,14 @@
 var photo_List = ["images/image-product-1.jpg", "images/image-product-2.jpg", "images/image-product-3.jpg", "images/image-product-4.jpg"]
 var photoCount = 0
 var orderCount = 1
+const deleteFromCart = document.getElementById("del-btn")
 const cartBtn = document.querySelector(".cart-icon")
-const AddToCartBtn = document.getElementById("add_btn")
+const AddToCartBtn = document.querySelector(".add-to-cart")
 const pluss = document.querySelector(".plus")
 const closeCart = document.querySelector(".close")
+
+
+
 
 closeCart.addEventListener("click", HideCart)
 function HideCart() {
@@ -37,7 +41,6 @@ function addToCart() {
     document.querySelector(".item-cont").innerHTML = orderCount
 }
 
-
 pluss.addEventListener("click", plus)
 function plus() {
     orderCount += 1;
@@ -48,27 +51,16 @@ function plus() {
     document.querySelector("#cart-item-cont").innerHTML = "x" + orderCount
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function delete_from_cart() {
+deleteFromCart.addEventListener("click", deleteBtn)
+function deleteBtn() {
+    orderCount = 1
     document.querySelector('.cart-product-div').style.display = "none"
     document.querySelector("#empty").style.display = "block"
+    document.querySelector(".order-count").style.display = "none"
+    document.querySelector(".checkout-btn").style.display = "none"
+    document.querySelector(".empty-case").style.display = "block"
+
+
 }
 
 
