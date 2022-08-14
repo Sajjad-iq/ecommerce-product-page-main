@@ -75,7 +75,8 @@ function minuss() {
     document.querySelector("#cart-item-cont").innerHTML = "x" + orderCount
     orderCount -= 1;
     if (orderCount == -1) {
-        orderCount = 1
+        orderCount = 0
+        document.querySelector(".item-cont").innerHTML = orderCount
         document.querySelector('.cart-product-div').style.display = "none"
         document.querySelector("#empty").style.display = "block"
         document.querySelector(".order-count").style.display = "none"
@@ -86,15 +87,13 @@ function minuss() {
 
 deleteFromCart.addEventListener("click", deleteBtn)
 function deleteBtn() {
-    orderCount = 1
     document.querySelector('.cart-product-div').style.display = "none"
     document.querySelector("#empty").style.display = "block"
     document.querySelector(".order-count").style.display = "none"
     document.querySelector(".checkout-btn").style.display = "none"
     document.querySelector(".empty-case").style.display = "block"
-    if (orderCount == 0) {
-
-    }
+    orderCount = 0
+    document.querySelector(".item-cont").innerHTML = orderCount
 }
 
 

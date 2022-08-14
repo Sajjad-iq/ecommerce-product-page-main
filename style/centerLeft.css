@@ -6,21 +6,24 @@
     width: 400px;
 }
 
-.main-product-img-div .main-img {
+.main-img {
     width: 350px;
     border-radius: 15px;
 }
-
 
 .thumbnail-photo-div {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
 }
 
 .image {
     width: 65px;
     margin-top: 15px;
     border-radius: 10px;
+    transition: 0.5s;
+}
+
+.image:active {
+    opacity: 0.7;
 }
