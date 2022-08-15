@@ -3,6 +3,7 @@
 @import url(CenterRight.css);
 @import url(centerLeft.css);
 @import url(PopUpWindow.css);
+@import url(querys.css);
 
 :root {
     /* primery */
@@ -31,6 +32,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 section {
