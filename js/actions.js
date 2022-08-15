@@ -1,6 +1,7 @@
 
 var PhotoList = ["images/image-product-1.jpg", "images/image-product-2.jpg", "images/image-product-3.jpg", "images/image-product-4.jpg"]
 var orderCount = 1
+var PhotoIndex = 0
 const deleteFromCart = document.getElementById("del-btn")
 const cartBtn = document.querySelector(".cart-icon")
 const AddToCartBtn = document.querySelector(".add-to-cart")
@@ -8,22 +9,38 @@ const pluss = document.querySelector(".plus")
 const closeCart = document.querySelector(".close")
 const minus = document.querySelector(".minus")
 const images = Array.from(document.querySelectorAll('.image'));
+const imagesForPupUP = Array.from(document.querySelectorAll('.image-for-pupUp'));
 const MainImage = document.querySelector(".main-img")
+const Main_Image_ForPupUp = document.querySelector(".main-img-for-pupUp")
+const PupUPWindow = document.querySelector(".pupup-product-window")
+
 
 for (let i = 0; i < images.length; i++) {
     images[i].src = PhotoList[i]
+    imagesForPupUP[i].src = PhotoList[i]
 }
 
 images.forEach(function (img, index) {
     img.addEventListener("click", () => ShowTheImg(index))
 })
+imagesForPupUP.forEach(function (img, index) {
+    img.addEventListener("click", () => ShowTheImg(index))
+})
 
 const ShowTheImg = (index) => {
     MainImage.src = PhotoList[index]
-    console.log("ok")
+    Main_Image_ForPupUp.src = PhotoList[index]
+
 }
 
-
+MainImage.addEventListener("click", Show_Hide_PupUP_Window)
+function Show_Hide_PupUP_Window() {
+    if (PupUPWindow.style.display = "none") {
+        return PupUPWindow.style.display = "flex"
+    } else {
+        return PupUPWindow.style.display = "none"
+    }
+}
 
 closeCart.addEventListener("click", HideCart)
 function HideCart() {
