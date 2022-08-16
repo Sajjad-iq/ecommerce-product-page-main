@@ -5,16 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/main.css">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
 <body>
 
+  <!-- hidden nav btns -->
+  <div class="hidden_btns">
+    <ul class="hidden-nav-buttons-list">
+      <li><a href="#" target="_blank">Collections</a></li>
+      <li><a href="#" target="_blank">Men</a></li>
+      <li><a href="#" target="_blank">Women</a></li>
+      <li><a href="#" target="_blank">About</a></li>
+      <li><a href="#" target="_blank">Contact</a></li>
+    </ul>
+  </div>
+
+
   <nav>
     <div class="nav-content">
       <!-- LEFT SIDE -->
       <div class="nav-left-div">
+        <span class="Hidden-nav-btns"><i class="fa-solid fa-bars"></i></span>
         <img src="images/logo.svg" alt="logo" class="logo">
         <ul class="nav-buttons-list">
           <li><a href="#" target="_blank">Collections</a></li>
@@ -121,6 +135,7 @@
   <!-- PUPUP PRODUCT WINDOW END -->
 
   <script src="js/actions.js"></script>
+  <script src="https://kit.fontawesome.com/83f33fa3c3.js" crossorigin="anonymous"></script>
 
 </body>
 

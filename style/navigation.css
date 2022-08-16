@@ -1,6 +1,6 @@
 /* NAV SECTION START */
 nav {
-    width: 90%
+    width: 90%;
 }
 
 .nav-content {
@@ -34,12 +34,14 @@ hr {
     margin-right: 40px
 }
 
-.nav-buttons-list {
+.nav-buttons-list,
+.hidden-nav-buttons-list {
     list-style: none;
     display: flex;
 }
 
-.nav-buttons-list a {
+.nav-buttons-list a,
+.hidden-nav-buttons-list a {
     text-decoration: none;
     color: var(--Dark-grayish-blue);
     margin: 0 10px;
