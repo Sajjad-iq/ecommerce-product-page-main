@@ -116,15 +116,7 @@
         width: 150px;
     }
 
-    .hidden_btns {
-        display: flex !important;
-        width: 50%;
-        height: 100vh;
-        background-color: rosybrown;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+
 
     .hidden-nav-buttons-list {
         display: flex;
@@ -135,5 +127,9 @@
 
     .hidden-nav-buttons-list * {
         margin: 10px 0;
+    }
+
+    .hidden-nav-buttons-list a {
+        color: white !important;
     }
 }

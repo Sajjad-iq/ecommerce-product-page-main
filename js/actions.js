@@ -13,6 +13,9 @@ const MainImage = document.querySelector(".main-img")
 const Main_Image_ForPupUp = document.querySelector(".main-img-for-pupUp")
 const PupUPWindow = document.querySelector(".pupup-product-window")
 const closePupUp_Window = document.getElementById("closePupUp")
+const HiddenNavLIstBtn = document.querySelector(".Hidden-nav-btns")
+const HiddenNavLIs = document.querySelector(".hidden_btns")
+const HiddenNavCloseBtn = document.querySelector(".nav-close-btn")
 
 for (let i = 0; i < images.length; i++) {
     images[i].src = PhotoList[i]
@@ -27,7 +30,21 @@ imagesForPupUP.forEach(function (img, index) {
     img.addEventListener("click", () => ShowTheImg(index))
 })
 
+HiddenNavLIstBtn.addEventListener("click", ShowHideNavList)
 
+function ShowHideNavList() {
+    if (HiddenNavLIs.style.display = "none") {
+        return HiddenNavLIs.style.display = "flex"
+    }
+}
+
+HiddenNavCloseBtn.addEventListener("click", hideNavList)
+
+function hideNavList() {
+    if (HiddenNavLIs.style.display = "flex") {
+        return HiddenNavLIs.style.display = "none"
+    }
+}
 const ShowTheImg = (index) => {
     MainImage.src = PhotoList[index]
     Main_Image_ForPupUp.src = PhotoList[index]

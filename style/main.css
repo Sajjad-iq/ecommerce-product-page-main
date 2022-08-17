@@ -52,8 +52,22 @@ section {
 
 .hidden_btns {
     display: none;
+    width: 50%;
+    height: 200%;
+    background-color: rosybrown;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
 }
 
 .Hidden-nav-btns {
     display: none;
+}
+
+.nav-close-btn {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
 }
