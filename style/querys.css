@@ -1,4 +1,4 @@
-@media (max-width:1040px) {
+@media (max-width:1024px) {
 
     section {
         margin-top: 20px;
@@ -24,7 +24,7 @@
 
 
 
-@media (max-width:785px) {
+@media (max-width:768px) {
     .main-product-img-div {
         width: fit-content;
     }
@@ -42,7 +42,7 @@
 
 
 
-@media (max-width:500px) {
+@media (max-width:480px) {
 
     .center-main-continner {
         flex-direction: column;
